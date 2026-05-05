@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 15 23 42;
+    
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+    
+    --primary: 79 70 229; /* Indigo 600 */
+    --primary-foreground: 255 255 255;
+    
+    --secondary: 16 185 129; /* Emerald 500 */
+    --secondary-foreground: 255 255 255;
+    
+    --accent: 245 158 11; /* Amber 500 */
+    --accent-foreground: 255 255 255;
+
+    --border: 226 232 240; /* Slate 200 */
+    --ring: 79 70 229;
+
+    /* Sidebar - Light */
+    --sidebar-bg: 255 255 255;
+    --sidebar-bg-accent: 241 245 249;
+    --sidebar-fg: 15 23 42;
+    --sidebar-primary: 79 70 229;
+    --sidebar-primary-fg: 255 255 255;
+    --sidebar-border: 226 232 240;
+  }
+
+  .dark {
+    --background: 10 12 16; /* Deep dark #0a0c10 */
+    --foreground: 248 250 252;
+    
+    --card: 16 20 28; /* Slightly lighter dark #10141c */
+    --card-foreground: 248 250 252;
+    
+    --primary: 99 102 241; /* Indigo 500 */
+    --primary-foreground: 255 255 255;
+    
+    --secondary: 52 211 153; /* Emerald 400 */
+    --secondary-foreground: 10 12 16;
+    
+    --accent: 251 191 36; /* Amber 400 */
+    --accent-foreground: 10 12 16;
+
+    --border: 30 41 59; /* Slate 800 */
+    --ring: 99 102 241;
+
+    /* Sidebar - Dark */
+    --sidebar-bg: 13 17 23; /* Very deep blue-grey */
+    --sidebar-bg-accent: 21 27 35;
+    --sidebar-fg: 248 250 252;
+    --sidebar-primary: 99 102 241;
+    --sidebar-primary-fg: 255 255 255;
+    --sidebar-border: 30 41 59;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans transition-colors duration-500 min-h-screen overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Ultra-Premium Glassmorphism 2.0 */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-white/20 dark:border-white/5 shadow-xl shadow-black/5 dark:shadow-black/20 rounded-2xl p-6 transition-all duration-500 hover:shadow-2xl hover:border-primary/30 relative overflow-hidden;
+  }
+
+  /* Glassmorphism Inner Glow (the Apple Vision OS effect) */
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl border border-white/40 dark:border-white/10 pointer-events-none transition-opacity duration-500 opacity-0;
+  }
+  
+  .glass-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Beautiful glowing background mesh */
+  .bg-mesh-dark {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(52, 211, 153, 0.15) 0px, transparent 50%);
+  }
+
+  .bg-mesh-light {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+  }
+
+  /* Premium Buttons */
+  .btn {
+    @apply px-5 py-2.5 rounded-xl font-medium tracking-wide transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-primary to-indigo-500 text-primary-foreground shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:to-indigo-400;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700;
+  }
+}
+
+/* Stunning Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300/50 dark:bg-slate-700/50 rounded-full hover:bg-primary/50 transition-colors;
+}
