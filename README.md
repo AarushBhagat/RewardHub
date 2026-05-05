@@ -68,6 +68,27 @@ Integrated with **Google Gemini AI**, RewardHub analyzes employee sentiment, pro
 
 ---
 
+## 🛠️ How to Update (Future Changes)
+
+Whenever you make new changes to the code and want to save them to GitHub, run these three simple commands:
+
+1. **Stage your changes:**
+   ```bash
+   git add .
+   ```
+
+2. **Commit with a message:**
+   ```bash
+   git commit -m "Explain what you changed here"
+   ```
+
+3. **Push to GitHub:**
+   ```bash
+   git push
+   ```
+
+---
+
 ## 📂 Project Structure
 
 ```text
