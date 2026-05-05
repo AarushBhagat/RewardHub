@@ -395,11 +395,11 @@ const AdminDashboard = () => {
                 <Tooltip 
                   cursor={{fill: 'transparent'}}
                   content={({ active, payload }) => {
-                    if (active || payload || payload.length) {
+                    if (active && payload && payload.length) {
                       return (
                         <div className="bg-slate-900 text-white p-3 rounded-xl shadow-xl border border-white/10">
                           <p className="text-xs font-bold text-slate-400 mb-1">{payload[0].payload.name}</p>
-                          <p className="text-lg font-black">\$\${payload[0].value.toLocaleString()}</p>
+                          <p className="text-lg font-black">${payload[0].value.toLocaleString()}</p>
                         </div>
                       );
                     }
@@ -408,7 +408,7 @@ const AdminDashboard = () => {
                 />
                 <Bar dataKey="total" radius={[8, 8, 0, 0]} maxBarSize={60}>
                   {deptChartData.map((entry, index) => (
-                    <Cell key={\`cell-\$\\\\{index}\`} fill={COLORS[index % COLORS.length]} />
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Bar>
               </BarChart>
@@ -432,12 +432,12 @@ const AdminDashboard = () => {
                     </div>
                     <span className="text-sm font-bold text-slate-900 dark:text-white">{emp.name}</span>
                   </div>
-                  <span className="text-sm font-black text-indigo-500">\$\${emp.total.toLocaleString()}</span>
+                  <span className="text-sm font-black text-indigo-500">${emp.total.toLocaleString()}</span>
                 </div>
                 <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                   <motion.div 
                     initial={{ width: 0 }}
-                    animate={{ width: \`\$\\\\{((emp.total / (topEmployeesData[0]?.total || 1)) * 100)}%\` }}
+                    animate={{ width: `${((emp.total / (topEmployeesData[0]?.total || 1)) * 100)}%` }}
                     className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
                   />
                 </div>
@@ -491,7 +491,7 @@ const AdminDashboard = () => {
                   stroke="none"
                 >
                   {typeData.map((entry, index) => (
-                    <Cell key={\`cell-\$\\\\{index}\`} fill={COLORS[index % COLORS.length]} />
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
                 <Tooltip 
@@ -538,7 +538,7 @@ const AdminDashboard = () => {
               <AnimatePresence>
                 {filteredData.map((row) => (
                   <motion.tr 
-                    key={\`\$\\\\{row.id}-\$\\\\{row.type}-\$\\\\{row.date}\`}
+                    key={`${row.id}-${row.type}-${row.date}`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -559,14 +559,14 @@ const AdminDashboard = () => {
                       <span className="text-sm font-medium text-slate-500">{row.dept}</span>
                     </td>
                     <td className="px-6 py-4">
-                      <span className={\`px-2 py-1 rounded-lg text-[10px] font-black uppercase \$\\\\{
+                      <span className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase ${
                         row.type === 'Bonus' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-indigo-500/10 text-indigo-500'
-                      }\`}>
+                      }`}>
                         {row.type}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <span className="text-sm font-black text-slate-900 dark:text-white">\$\${row.amount.toLocaleString()}</span>
+                      <span className="text-sm font-black text-slate-900 dark:text-white">${row.amount.toLocaleString()}</span>
                     </td>
                     <td className="px-6 py-4 text-right text-sm text-slate-500 font-medium whitespace-nowrap">
                       {new Date(row.date).toLocaleDateString()}
@@ -585,8 +585,8 @@ const AdminDashboard = () => {
           </table>
         </div>
     
-
       </div>
+    </div>
     </div>
   );
 };
