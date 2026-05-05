@@ -6,8 +6,10 @@ import {
   TrendingUp, 
   Activity,
   Award,
-  MoreVertical
+  MoreVertical,
+  ArrowRight
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { 
   AreaChart, 
   Area, 
@@ -67,42 +69,52 @@ const AnimatedCounter = ({ value, duration = 2 }) => {
   return <span>{count}</span>;
 };
 
-const StatCard = ({ title, value, icon, trend, trendValue, delay }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay }}
-    className="glass-card flex flex-col relative overflow-hidden group"
-  >
-    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
-    
-    <div className="flex justify-between items-start mb-4">
-      <div className="p-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl text-primary border border-slate-200/50 dark:border-slate-700/50 shadow-inner">
-        {icon}
-      </div>
-      <button className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors bg-white/20 dark:bg-slate-800/20 p-2 rounded-xl backdrop-blur-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
-        <MoreVertical size={18} />
-      </button>
-    </div>
-    
-    <div>
-      <h3 className="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide">{title}</h3>
-      <div className="flex items-baseline gap-2 mt-2">
-        <h2 className="text-4xl font-bold text-slate-900 dark:text-white font-display tracking-tight">
-          <AnimatedCounter value={value} />
-        </h2>
-        <div className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-bold ${
-          trend === 'up' 
-            ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20' 
-            : 'bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20'
-        }`}>
-          <span>{trend === 'up' ? '↗' : '↘'}</span>
-          <span>{trendValue}%</span>
+const StatCard = ({ title, value, icon, trend, trendValue, delay, path }) => {
+  const navigate = useNavigate();
+  
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      onClick={() => path && navigate(path)}
+      className={`glass-card flex flex-col relative overflow-hidden group cursor-pointer border-transparent hover:border-primary/30 transition-all duration-300`}
+    >
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
+      
+      <div className="flex justify-between items-start mb-4">
+        <div className="p-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl text-primary border border-slate-200/50 dark:border-slate-700/50 shadow-inner group-hover:bg-primary group-hover:text-white transition-all duration-500">
+          {icon}
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-primary">
+            <ArrowRight size={16} />
+          </div>
+          <button className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors bg-white/20 dark:bg-slate-800/20 p-2 rounded-xl backdrop-blur-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
+            <MoreVertical size={18} />
+          </button>
         </div>
       </div>
-    </div>
-  </motion.div>
-);
+      
+      <div>
+        <h3 className="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide">{title}</h3>
+        <div className="flex items-baseline gap-2 mt-2">
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white font-display tracking-tight">
+            <AnimatedCounter value={value} />
+          </h2>
+          <div className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-bold ${
+            trend === 'up' 
+              ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20' 
+              : 'bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20'
+          }`}>
+            <span>{trend === 'up' ? '↗' : '↘'}</span>
+            <span>{trendValue}%</span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const AdminDashboard = () => {
   return (
@@ -126,10 +138,10 @@ const AdminDashboard = () => {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Total Employees" value={124} icon={<Users size={24} />} trend="up" trendValue={12} delay={0.1} />
-        <StatCard title="Rewards Issued" value={45} icon={<Gift size={24} />} trend="up" trendValue={8} delay={0.2} />
-        <StatCard title="Avg Performance" value={88} icon={<TrendingUp size={24} />} trend="up" trendValue={5} delay={0.3} />
-        <StatCard title="Avg Attendance" value={94} icon={<Activity size={24} />} trend="down" trendValue={2} delay={0.4} />
+        <StatCard title="Total Employees" value={124} icon={<Users size={24} />} trend="up" trendValue={12} delay={0.1} path="/admin/employees" />
+        <StatCard title="Rewards Issued" value={45} icon={<Gift size={24} />} trend="up" trendValue={8} delay={0.2} path="/admin/rewards" />
+        <StatCard title="Avg Performance" value={88} icon={<TrendingUp size={24} />} trend="up" trendValue={5} delay={0.3} path="/admin/performance" />
+        <StatCard title="Avg Attendance" value={94} icon={<Activity size={24} />} trend="down" trendValue={2} delay={0.4} path="/admin/attendance" />
       </div>
 
       {/* Charts Section */}

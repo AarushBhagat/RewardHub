@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { motion } from 'framer-motion';
-import { Award, Target, Trophy, Flame, ChevronRight } from 'lucide-react';
+import { Award, Target, Trophy, Flame, ChevronRight, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // Animated Counter Component
 const AnimatedCounter = ({ value, duration = 2 }) => {
@@ -25,6 +26,7 @@ const AnimatedCounter = ({ value, duration = 2 }) => {
 
 const EmployeeDashboard = () => {
   const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   // Mock data for employee
   const currentPoints = 850;
@@ -79,9 +81,13 @@ const EmployeeDashboard = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="md:col-span-7 glass-card flex flex-col justify-center relative overflow-hidden"
+          onClick={() => navigate('/employee/rewards')}
+          className="md:col-span-7 glass-card flex flex-col justify-center relative overflow-hidden cursor-pointer group hover:border-primary/30 transition-all duration-300"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
+          <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity text-primary">
+            <ArrowRight size={20} />
+          </div>
           
           <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-6 flex items-center gap-2">
             <Target className="text-primary" size={20} />
@@ -147,23 +153,24 @@ const EmployeeDashboard = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="glass-card"
+            onClick={() => navigate('/employee/badges')}
+            className="glass-card cursor-pointer group hover:border-primary/30 transition-all duration-300"
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="font-semibold text-slate-800 dark:text-slate-200">Recent Badges</h3>
-              <button className="text-xs text-primary hover:text-primary-hover flex items-center">
+              <button className="text-xs text-primary group-hover:translate-x-1 transition-transform flex items-center">
                 View All <ChevronRight size={14} />
               </button>
             </div>
             
             <div className="grid grid-cols-4 gap-3">
-              <div className="flex flex-col items-center justify-center p-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/30 rounded-xl hover:scale-105 transition-transform cursor-pointer">
+              <div className="flex flex-col items-center justify-center p-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/30 rounded-xl group-hover:scale-105 transition-transform">
                 <span className="text-3xl filter drop-shadow-md">🌟</span>
               </div>
-              <div className="flex flex-col items-center justify-center p-3 bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30 rounded-xl hover:scale-105 transition-transform cursor-pointer">
+              <div className="flex flex-col items-center justify-center p-3 bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30 rounded-xl group-hover:scale-105 transition-transform">
                 <span className="text-3xl filter drop-shadow-md">📅</span>
               </div>
-              <div className="flex flex-col items-center justify-center p-3 bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-xl hover:scale-105 transition-transform cursor-pointer">
+              <div className="flex flex-col items-center justify-center p-3 bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-xl group-hover:scale-105 transition-transform">
                 <span className="text-3xl filter drop-shadow-md">🤝</span>
               </div>
               <div className="flex flex-col items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl opacity-50 grayscale">
