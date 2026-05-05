@@ -1,16 +1,90 @@
-# React + Vite
+# 💎 RewardHub | The Future of HR Excellence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-Currently, two official plugins are available:
+**RewardHub** is an ultra-premium HR Management & Employee Recognition platform designed for modern, high-performance teams. It replaces traditional, clunky HR tools with a silky-smooth, glassmorphic interface and AI-driven intelligence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧠 **AI-Powered Engine**
+Integrated with **Google Gemini AI**, RewardHub analyzes employee sentiment, provides personalized performance coaching, and helps admins draft professional feedback in seconds.
 
-## Expanding the ESLint configuration
+### 📊 **Intelligent Analytics**
+- **Real-time Dashboards:** Visualized tracking of reward points, bonus trends, and departmental growth using **Recharts**.
+- **Master Reports:** Generate high-fidelity PDF exports for performance audits and financial planning.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 💎 **Dynamic Recognition System**
+- **Tier-Based Ranking:** Employees automatically progress through Diamond, Gold, Silver, and Bronze tiers based on points.
+- **Badge Ecosystem:** Digital recognition for innovation, teamwork, and leadership.
+- **Peer-to-Peer Feedback:** Foster a culture of appreciation with collaborative feedback loops.
+
+### ⚡ **Ultra-Premium UI/UX**
+- **Glassmorphism 2.0:** Deep translucency, backdrop blurs, and elegant border glows.
+- **Micro-Animations:** Silky transitions powered by **Framer Motion**.
+- **Adaptive Dark Mode:** A stunning deep-space theme optimized for professional focus.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend:** React 19 + Vite (for lightning-fast HMR)
+- **Styling:** Tailwind CSS + Vanilla CSS (Custom Design System)
+- **Animations:** Framer Motion
+- **Charts:** Recharts
+- **Intelligence:** Google Generative AI (Gemini)
+- **Icons:** Lucide React
+- **Notifications:** React Hot Toast
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AarushBhagat/RewardHub.git
+   cd RewardHub
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/     # Reusable premium UI components
+├── context/        # State management (Auth, Theme)
+├── data/           # Local state & mock data systems
+├── layouts/        # Admin & Employee portal frameworks
+├── pages/          # Feature-rich page modules
+└── utils/          # AI & Helper functions
+```
+
+---
+
+## 📜 License
+This project is licensed under the MIT License. Built with ❤️ for the next generation of HR.
+
+---
+
+*“Recognize excellence, inspire growth.”* 🚀
