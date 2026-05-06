@@ -26,11 +26,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const user = await login(email, password);
       toast.success(`Welcome back, ${user.name}!`);
-      
+
       // Navigate is handled by the useEffect above
     } catch (error) {
       toast.error(error.message || 'Failed to login');
@@ -40,24 +40,24 @@ const Login = () => {
 
   const handleDemoFill = (role) => {
     if (role === 'admin') {
-      setEmail('admin@company.com');
+      setEmail('aarush@company.com');
       setPassword('password123');
     } else {
-      setEmail('john.doe@company.com');
+      setEmail('monalisha@company.com');
       setPassword('password123');
     }
   };
 
   return (
     <div className="min-h-screen bg-transparent flex items-center justify-center p-4 relative overflow-hidden z-10">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-md"
       >
         <div className="bg-white/80 dark:bg-slate-800/50 backdrop-blur-xl border border-slate-200 dark:border-slate-700 rounded-2xl p-8 shadow-2xl relative z-10">
-          
+
           <div className="flex flex-col items-center mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-4 shadow-glow">
               <ShieldCheck className="text-white w-8 h-8" />
@@ -121,14 +121,14 @@ const Login = () => {
           <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700/50">
             <p className="text-slate-500 dark:text-slate-400 text-xs text-center mb-3 text-uppercase tracking-wider font-semibold">Demo Credentials</p>
             <div className="grid grid-cols-2 gap-3">
-              <button 
+              <button
                 onClick={() => handleDemoFill('admin')}
                 className="text-xs py-2 px-3 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white transition-colors border border-slate-200 dark:border-slate-700 flex items-center justify-center gap-1 shadow-sm"
               >
                 Admin
                 <ArrowRight className="w-3 h-3" />
               </button>
-              <button 
+              <button
                 onClick={() => handleDemoFill('employee')}
                 className="text-xs py-2 px-3 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white transition-colors border border-slate-200 dark:border-slate-700 flex items-center justify-center gap-1 shadow-sm"
               >

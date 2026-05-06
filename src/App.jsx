@@ -30,6 +30,7 @@ import EmployeeAttendance from './pages/employee/Attendance';
 import EmployeeBadges from './pages/employee/Badges';
 import EmployeeFeedback from './pages/employee/Feedback';
 import EmployeeNotifications from './pages/employee/Notifications';
+import EmployeeRedeemReward from './pages/employee/RedeemReward';
 
 function App() {
   // Global theme initialization to force dark mode by default on all pages (including Login)
@@ -112,6 +113,7 @@ function App() {
               <Route path="badges" element={<EmployeeBadges />} />
               <Route path="feedback" element={<EmployeeFeedback />} />
               <Route path="notifications" element={<EmployeeNotifications />} />
+              <Route path="redeem" element={<EmployeeRedeemReward />} />
             </Route>
 
             {/* Catch all */}

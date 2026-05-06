@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import PremiumSidebar from '../components/PremiumSidebar';
-import { Home, Star, TrendingUp, Users, Calendar, Shield, MessageSquare } from 'lucide-react';
+import { Home, Star, TrendingUp, Users, Calendar, Shield, MessageSquare, ShoppingBag } from 'lucide-react';
 import Topbar from '../components/Topbar';
 import PageTransition from '../components/PageTransition';
 import { AnimatePresence } from 'framer-motion';
@@ -40,6 +40,7 @@ const EmployeeLayout = () => {
     { name: 'Badges', path: '/employee/badges', icon: <Shield size={20} /> },
     { name: 'Feedback', path: '/employee/feedback', icon: <MessageSquare size={20} /> },
     { name: 'Leaderboard', path: '/employee/leaderboard', icon: <Users size={20} /> },
+    { name: 'Redeem Rewards', path: '/employee/redeem', icon: <ShoppingBag size={20} /> },
   ];
 
   return (

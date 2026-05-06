@@ -150,6 +150,8 @@ const AttendanceDetailPanel = ({ emp, onClose }) => {
 const Attendance = () => {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
 
+  const [activeTab, setActiveTab] = useState('summary');
+
   const summary = useMemo(() => {
     const total = attendance.length;
     return {
@@ -169,20 +171,38 @@ const Attendance = () => {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Attendance Tracking</h1>
-        <p className="text-slate-500 dark:text-slate-400 mt-1">Monitor daily attendance and calculate scores.</p>
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Attendance Tracking</h1>
+          <p className="text-slate-500 dark:text-slate-400 mt-1">Monitor daily attendance and calculate scores.</p>
+        </div>
+
+        {/* Small Tabs */}
+        <div className="flex space-x-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg w-fit border border-slate-200 dark:border-slate-700">
+          <button 
+            onClick={() => setActiveTab('summary')} 
+            className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${activeTab === 'summary' ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'}`}
+          >
+            Summary
+          </button>
+          <button 
+            onClick={() => setActiveTab('details')} 
+            className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${activeTab === 'details' ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'}`}
+          >
+            Details
+          </button>
+        </div>
       </div>
 
-      {/* Summary Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Smaller Summary Cards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {summaryCards.map((card, i) => (
           <motion.div key={card.label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}
-            className={`glass-card flex items-center gap-4 border-l-4 ${card.border}`}>
-            <div className={`p-3 ${card.iconBg} rounded-xl`}>{card.icon}</div>
+            className={`bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 flex items-center gap-3 p-3 border-l-4 ${card.border}`}>
+            <div className={`p-2 ${card.iconBg} rounded-lg [&>svg]:w-4 [&>svg]:h-4`}>{card.icon}</div>
             <div>
-              <p className="text-sm text-slate-500">{card.label}</p>
-              <p className="text-2xl font-bold text-slate-900 dark:text-white">{card.value}</p>
+              <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">{card.label}</p>
+              <p className="text-lg font-black text-slate-900 dark:text-white">{card.value}</p>
             </div>
           </motion.div>
         ))}
@@ -191,101 +211,105 @@ const Attendance = () => {
       {/* Main Grid */}
       <div className={`grid gap-6 transition-all duration-300 ${selectedEmployee ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1'}`}>
 
-        {/* Left: Employee list + full records table */}
+        {/* Left: Employee list OR full records table depending on tab */}
         <div className="space-y-5">
 
-          {/* Clickable Employee List */}
-          <div className="glass-card p-0 overflow-hidden">
-            <div className="p-5 border-b border-slate-200 dark:border-slate-700/60">
-              <h2 className="font-bold text-slate-900 dark:text-white">Employee Overview</h2>
-              <p className="text-xs text-slate-500 mt-0.5">Click an employee to view their individual attendance</p>
-            </div>
-            <div className="divide-y divide-slate-100 dark:divide-slate-800/60">
-              {employees.map((emp, i) => {
-                const empRecords = attendance.filter(r => r.employeeId === emp.id);
-                const rate = empRecords.length > 0
-                  ? Math.round(((empRecords.filter(r => r.status === 'Present' || r.status === 'Remote').length) / empRecords.length) * 100)
-                  : 0;
-                const isSelected = selectedEmployee?.id === emp.id;
-                const rateColor = rate >= 90 ? 'text-emerald-500' : rate >= 70 ? 'text-amber-500' : 'text-red-500';
-                return (
-                  <motion.button key={emp.id}
-                    initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.07 }}
-                    onClick={() => setSelectedEmployee(prev => prev?.id === emp.id ? null : emp)}
-                    className={`w-full flex items-center gap-4 px-5 py-4 text-left transition-all duration-200 group
-                      ${isSelected
-                        ? 'bg-primary/8 border-l-[3px] border-primary'
-                        : 'hover:bg-slate-50 dark:hover:bg-slate-800/30 border-l-[3px] border-transparent'
-                      }`}>
-                    <img src={emp.avatar} alt={emp.name} className={`w-11 h-11 rounded-xl object-cover border-2 transition-all ${isSelected ? 'border-primary/40 ring-2 ring-primary/30' : 'border-slate-200 dark:border-slate-700'}`} />
-                    <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-slate-900 dark:text-white text-sm">{emp.name}</p>
-                      <p className="text-xs text-slate-500">{emp.id} · {emp.department}</p>
-                    </div>
-                    <div className="flex items-center gap-4 shrink-0">
-                      <div className="text-right">
-                        <p className={`font-black text-lg font-display ${rateColor}`}>{rate}%</p>
-                        <p className="text-xs text-slate-400">rate</p>
+          {/* SUMMARY TAB: Clickable Employee List */}
+          {activeTab === 'summary' && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-0 overflow-hidden">
+              <div className="p-5 border-b border-slate-200 dark:border-slate-700/60">
+                <h2 className="font-bold text-slate-900 dark:text-white">Employee Overview</h2>
+                <p className="text-xs text-slate-500 mt-0.5">Click an employee to view their individual attendance</p>
+              </div>
+              <div className="divide-y divide-slate-100 dark:divide-slate-800/60">
+                {employees.map((emp, i) => {
+                  const empRecords = attendance.filter(r => r.employeeId === emp.id);
+                  const rate = empRecords.length > 0
+                    ? Math.round(((empRecords.filter(r => r.status === 'Present' || r.status === 'Remote').length) / empRecords.length) * 100)
+                    : 0;
+                  const isSelected = selectedEmployee?.id === emp.id;
+                  const rateColor = rate >= 90 ? 'text-emerald-500' : rate >= 70 ? 'text-amber-500' : 'text-red-500';
+                  return (
+                    <motion.button key={emp.id}
+                      initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.07 }}
+                      onClick={() => setSelectedEmployee(prev => prev?.id === emp.id ? null : emp)}
+                      className={`w-full flex items-center gap-4 px-5 py-4 text-left transition-all duration-200 group
+                        ${isSelected
+                          ? 'bg-indigo-500/10 border-l-[3px] border-indigo-500'
+                          : 'hover:bg-slate-50 dark:hover:bg-slate-800/30 border-l-[3px] border-transparent'
+                        }`}>
+                      <img src={emp.avatar} alt={emp.name} className={`w-11 h-11 rounded-xl object-cover border-2 transition-all ${isSelected ? 'border-indigo-500/40 ring-2 ring-indigo-500/30' : 'border-slate-200 dark:border-slate-700'}`} />
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-slate-900 dark:text-white text-sm">{emp.name}</p>
+                        <p className="text-xs text-slate-500">{emp.id} · {emp.department}</p>
                       </div>
-                      <div className="text-right hidden sm:block">
-                        <p className="font-bold text-slate-700 dark:text-slate-300">{empRecords.length}</p>
-                        <p className="text-xs text-slate-400">records</p>
+                      <div className="flex items-center gap-4 shrink-0">
+                        <div className="text-right">
+                          <p className={`font-black text-lg font-display ${rateColor}`}>{rate}%</p>
+                          <p className="text-xs text-slate-400">rate</p>
+                        </div>
+                        <div className="text-right hidden sm:block">
+                          <p className="font-bold text-slate-700 dark:text-slate-300">{empRecords.length}</p>
+                          <p className="text-xs text-slate-400">records</p>
+                        </div>
+                        <ChevronRight size={16}
+                          className={`text-slate-400 transition-all duration-200 ${isSelected ? 'rotate-90 text-indigo-500' : 'group-hover:translate-x-0.5'}`} />
                       </div>
-                      <ChevronRight size={16}
-                        className={`text-slate-400 transition-all duration-200 ${isSelected ? 'rotate-90 text-primary' : 'group-hover:translate-x-0.5'}`} />
-                    </div>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </div>
+                    </motion.button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
 
-          {/* All Records Table */}
-          <div className="glass-card p-0 overflow-hidden">
-            <div className="p-5 border-b border-slate-200 dark:border-slate-700/60">
-              <h2 className="font-bold text-slate-900 dark:text-white">Recent Records</h2>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="bg-slate-50/50 dark:bg-slate-800/30 text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">
-                    <th className="px-5 py-3">Date</th>
-                    <th className="px-5 py-3">Employee</th>
-                    <th className="px-5 py-3">Status</th>
-                    <th className="px-5 py-3">Check In</th>
-                    <th className="px-5 py-3">Score</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
-                  {attendance.map((record, i) => {
-                    const emp = employees.find(e => e.id === record.employeeId);
-                    const cfg = STATUS_CONFIG[record.status] || STATUS_CONFIG.Present;
-                    return (
-                      <motion.tr key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.04 }}
-                        className="hover:bg-slate-50 dark:hover:bg-slate-800/20 transition-colors">
-                        <td className="px-5 py-3 text-sm font-medium text-slate-900 dark:text-white">{record.date}</td>
-                        <td className="px-5 py-3">
-                          <div className="flex items-center gap-2">
-                            {emp && <img src={emp.avatar} className="w-7 h-7 rounded-lg object-cover" alt="" />}
-                            <span className="text-xs font-medium text-slate-700 dark:text-slate-300">{record.employeeId}</span>
-                          </div>
-                        </td>
-                        <td className="px-5 py-3">
-                          <span className={`px-2.5 py-1 text-xs font-semibold rounded-full flex items-center gap-1 w-fit ${cfg.badge}`}>
-                            {cfg.icon} {record.status}
-                          </span>
-                        </td>
-                        <td className="px-5 py-3 text-sm text-slate-500 dark:text-slate-400">{record.checkIn || '—'}</td>
-                        <td className={`px-5 py-3 text-sm font-bold ${record.scoreImpact > 0 ? 'text-emerald-500' : 'text-red-500'}`}>
-                          {record.scoreImpact > 0 ? '+' : ''}{record.scoreImpact} pts
-                        </td>
-                      </motion.tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          {/* DETAILS TAB: All Records Table */}
+          {activeTab === 'details' && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-0 overflow-hidden">
+              <div className="p-5 border-b border-slate-200 dark:border-slate-700/60">
+                <h2 className="font-bold text-slate-900 dark:text-white">Detailed Attendance Records</h2>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="bg-slate-50/50 dark:bg-slate-800/30 text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">
+                      <th className="px-5 py-3">Date</th>
+                      <th className="px-5 py-3">Employee</th>
+                      <th className="px-5 py-3">Status</th>
+                      <th className="px-5 py-3">Check In</th>
+                      <th className="px-5 py-3">Score</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
+                    {attendance.map((record, i) => {
+                      const emp = employees.find(e => e.id === record.employeeId);
+                      const cfg = STATUS_CONFIG[record.status] || STATUS_CONFIG.Present;
+                      return (
+                        <motion.tr key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.04 }}
+                          className="hover:bg-slate-50 dark:hover:bg-slate-800/20 transition-colors">
+                          <td className="px-5 py-3 text-sm font-medium text-slate-900 dark:text-white">{record.date}</td>
+                          <td className="px-5 py-3">
+                            <div className="flex items-center gap-2">
+                              {emp && <img src={emp.avatar} className="w-7 h-7 rounded-lg object-cover" alt="" />}
+                              <span className="text-xs font-medium text-slate-700 dark:text-slate-300">{record.employeeId}</span>
+                            </div>
+                          </td>
+                          <td className="px-5 py-3">
+                            <span className={`px-2.5 py-1 text-xs font-semibold rounded-full flex items-center gap-1 w-fit ${cfg.badge}`}>
+                              {cfg.icon} {record.status}
+                            </span>
+                          </td>
+                          <td className="px-5 py-3 text-sm text-slate-500 dark:text-slate-400">{record.checkIn || '—'}</td>
+                          <td className={`px-5 py-3 text-sm font-bold ${record.scoreImpact > 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+                            {record.scoreImpact > 0 ? '+' : ''}{record.scoreImpact} pts
+                          </td>
+                        </motion.tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+          )}
         </div>
 
         {/* Right: Detail Panel */}

@@ -101,7 +101,7 @@ const EmployeeDetailPanel = ({ emp, onClose }) => {
         <div className={`flex items-center justify-between p-4 rounded-xl text-sm font-medium
           ${emp.latestScore >= 90 ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' :
             emp.latestScore >= 75 ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400' :
-            'bg-red-500/10 text-red-600 dark:text-red-400'}`}
+              'bg-red-500/10 text-red-600 dark:text-red-400'}`}
         >
           <span>Overall Rating</span>
           <span className="font-bold text-base">
@@ -209,7 +209,7 @@ const Performance = () => {
               </div>
               <h3 className="font-semibold text-slate-800 dark:text-white">Top Performer</h3>
             </div>
-            <p className="text-xl font-bold text-slate-900 dark:text-white mt-1">Bob Johnson</p>
+            <p className="text-xl font-bold text-slate-900 dark:text-white mt-1">Aarush Bhagat</p>
             <p className="text-sm text-slate-500 mt-1">EMP003 • Score: 98/100</p>
           </div>
         </div>
