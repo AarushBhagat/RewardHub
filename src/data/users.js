@@ -3,7 +3,7 @@ export const users = [
     id: "EMP001",
     email: "aarush@company.com",
     password: "password123", // Mock password
-    role: "admin",
+    role: "employee",
     name: "Aarush",
     avatar: "https://ui-avatars.com/api/?name=Aarush&background=4F46E5&color=fff"
   },
@@ -11,7 +11,7 @@ export const users = [
     id: "EMP002",
     email: "monalisha@company.com",
     password: "password123",
-    role: "employee",
+    role: "admin",
     name: "Monalisha",
     avatar: "https://ui-avatars.com/api/?name=Monalisha&background=22C55E&color=fff"
   },
