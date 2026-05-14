@@ -84,8 +84,8 @@ export const employees = [
     joinDate: "2023-09-01",
     avatar: "https://ui-avatars.com/api/?name=Ashwani+Kumar&background=F43F5E&color=fff",
     email: "ashwani@company.com",
-    points: 800,
-    tier: "Silver"
+    points: 3500,
+    tier: "Diamond"
   },
   {
     id: "EMP009",
@@ -95,8 +95,8 @@ export const employees = [
     joinDate: "2024-01-15",
     avatar: "https://ui-avatars.com/api/?name=Jhanvi+Arora&background=6366F1&color=fff",
     email: "jhanvi@company.com",
-    points: 650,
-    tier: "Silver"
+    points: 3200,
+    tier: "Diamond"
   },
   {
     id: "EMP010",
@@ -106,7 +106,7 @@ export const employees = [
     joinDate: "2024-03-20",
     avatar: "https://ui-avatars.com/api/?name=Rajath+Kumar&background=14B8A6&color=fff",
     email: "rajath@company.com",
-    points: 300,
-    tier: "Bronze"
+    points: 3000,
+    tier: "Diamond"
   }
 ];

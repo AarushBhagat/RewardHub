@@ -1,7 +1,7 @@
 export const performance = [
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "month": "Oct 2023",
     "taskCompletion": 95,
     "qualityOfWork": 92,
@@ -12,7 +12,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "month": "Nov 2023",
     "taskCompletion": 97,
     "qualityOfWork": 96,
@@ -23,7 +23,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "month": "Dec 2023",
     "taskCompletion": 97,
     "qualityOfWork": 97,
@@ -34,7 +34,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "month": "Jan 2024",
     "taskCompletion": 95,
     "qualityOfWork": 94,
@@ -45,7 +45,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "month": "Feb 2024",
     "taskCompletion": 95,
     "qualityOfWork": 92,
@@ -56,7 +56,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "month": "Mar 2024",
     "taskCompletion": 95,
     "qualityOfWork": 93,
@@ -67,7 +67,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "month": "Oct 2023",
     "taskCompletion": 94,
     "qualityOfWork": 91,
@@ -78,7 +78,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "month": "Nov 2023",
     "taskCompletion": 94,
     "qualityOfWork": 92,
@@ -89,7 +89,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "month": "Dec 2023",
     "taskCompletion": 92,
     "qualityOfWork": 90,
@@ -100,7 +100,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "month": "Jan 2024",
     "taskCompletion": 92,
     "qualityOfWork": 90,
@@ -111,7 +111,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "month": "Feb 2024",
     "taskCompletion": 93,
     "qualityOfWork": 91,
@@ -122,7 +122,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "month": "Mar 2024",
     "taskCompletion": 92,
     "qualityOfWork": 89,
@@ -133,7 +133,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "month": "Oct 2023",
     "taskCompletion": 92,
     "qualityOfWork": 92,
@@ -144,7 +144,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "month": "Nov 2023",
     "taskCompletion": 94,
     "qualityOfWork": 92,
@@ -155,7 +155,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "month": "Dec 2023",
     "taskCompletion": 93,
     "qualityOfWork": 92,
@@ -166,7 +166,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "month": "Jan 2024",
     "taskCompletion": 90,
     "qualityOfWork": 89,
@@ -177,7 +177,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "month": "Feb 2024",
     "taskCompletion": 91,
     "qualityOfWork": 88,
@@ -188,7 +188,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "month": "Mar 2024",
     "taskCompletion": 90,
     "qualityOfWork": 88,
@@ -199,7 +199,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "month": "Oct 2023",
     "taskCompletion": 91,
     "qualityOfWork": 91,
@@ -210,7 +210,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "month": "Nov 2023",
     "taskCompletion": 91,
     "qualityOfWork": 91,
@@ -221,7 +221,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "month": "Dec 2023",
     "taskCompletion": 91,
     "qualityOfWork": 88,
@@ -232,7 +232,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "month": "Jan 2024",
     "taskCompletion": 90,
     "qualityOfWork": 89,
@@ -243,7 +243,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "month": "Feb 2024",
     "taskCompletion": 88,
     "qualityOfWork": 85,
@@ -254,7 +254,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "month": "Mar 2024",
     "taskCompletion": 88,
     "qualityOfWork": 87,
@@ -265,7 +265,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "month": "Oct 2023",
     "taskCompletion": 88,
     "qualityOfWork": 88,
@@ -276,7 +276,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "month": "Nov 2023",
     "taskCompletion": 86,
     "qualityOfWork": 84,
@@ -287,7 +287,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "month": "Dec 2023",
     "taskCompletion": 87,
     "qualityOfWork": 87,
@@ -298,7 +298,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "month": "Jan 2024",
     "taskCompletion": 86,
     "qualityOfWork": 83,
@@ -309,7 +309,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "month": "Feb 2024",
     "taskCompletion": 90,
     "qualityOfWork": 88,
@@ -320,7 +320,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "month": "Mar 2024",
     "taskCompletion": 89,
     "qualityOfWork": 87,
@@ -331,7 +331,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "month": "Oct 2023",
     "taskCompletion": 87,
     "qualityOfWork": 86,
@@ -342,7 +342,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "month": "Nov 2023",
     "taskCompletion": 85,
     "qualityOfWork": 85,
@@ -353,7 +353,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "month": "Dec 2023",
     "taskCompletion": 88,
     "qualityOfWork": 87,
@@ -364,7 +364,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "month": "Jan 2024",
     "taskCompletion": 86,
     "qualityOfWork": 84,
@@ -375,7 +375,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "month": "Feb 2024",
     "taskCompletion": 87,
     "qualityOfWork": 85,
@@ -386,7 +386,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "month": "Mar 2024",
     "taskCompletion": 89,
     "qualityOfWork": 88,
@@ -397,7 +397,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "month": "Oct 2023",
     "taskCompletion": 81,
     "qualityOfWork": 78,
@@ -408,7 +408,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "month": "Nov 2023",
     "taskCompletion": 82,
     "qualityOfWork": 81,
@@ -419,7 +419,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "month": "Dec 2023",
     "taskCompletion": 83,
     "qualityOfWork": 80,
@@ -430,7 +430,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "month": "Jan 2024",
     "taskCompletion": 82,
     "qualityOfWork": 79,
@@ -441,7 +441,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "month": "Feb 2024",
     "taskCompletion": 83,
     "qualityOfWork": 81,
@@ -452,7 +452,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "month": "Mar 2024",
     "taskCompletion": 82,
     "qualityOfWork": 82,
@@ -463,7 +463,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "month": "Oct 2023",
     "taskCompletion": 82,
     "qualityOfWork": 81,
@@ -474,7 +474,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "month": "Nov 2023",
     "taskCompletion": 80,
     "qualityOfWork": 77,
@@ -485,7 +485,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "month": "Dec 2023",
     "taskCompletion": 80,
     "qualityOfWork": 79,
@@ -496,7 +496,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "month": "Jan 2024",
     "taskCompletion": 81,
     "qualityOfWork": 81,
@@ -507,7 +507,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "month": "Feb 2024",
     "taskCompletion": 78,
     "qualityOfWork": 76,
@@ -518,7 +518,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "month": "Mar 2024",
     "taskCompletion": 82,
     "qualityOfWork": 79,
@@ -529,7 +529,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "month": "Oct 2023",
     "taskCompletion": 77,
     "qualityOfWork": 75,
@@ -540,7 +540,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "month": "Nov 2023",
     "taskCompletion": 77,
     "qualityOfWork": 76,
@@ -551,7 +551,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "month": "Dec 2023",
     "taskCompletion": 79,
     "qualityOfWork": 76,
@@ -562,7 +562,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "month": "Jan 2024",
     "taskCompletion": 76,
     "qualityOfWork": 73,
@@ -573,7 +573,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "month": "Feb 2024",
     "taskCompletion": 78,
     "qualityOfWork": 75,
@@ -584,7 +584,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "month": "Mar 2024",
     "taskCompletion": 79,
     "qualityOfWork": 77,
@@ -595,7 +595,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "month": "Oct 2023",
     "taskCompletion": 72,
     "qualityOfWork": 71,
@@ -606,7 +606,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "month": "Nov 2023",
     "taskCompletion": 70,
     "qualityOfWork": 67,
@@ -617,7 +617,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "month": "Dec 2023",
     "taskCompletion": 70,
     "qualityOfWork": 70,
@@ -628,7 +628,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "month": "Jan 2024",
     "taskCompletion": 74,
     "qualityOfWork": 74,
@@ -639,7 +639,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "month": "Feb 2024",
     "taskCompletion": 74,
     "qualityOfWork": 73,
@@ -650,7 +650,7 @@ export const performance = [
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "month": "Mar 2024",
     "taskCompletion": 70,
     "qualityOfWork": 67,
@@ -664,72 +664,72 @@ export const performance = [
 export const employeePerformanceSummary = [
   {
     "employeeId": "EMP001",
-    "name": "Aarush",
+    "name": "surinder kumar",
     "latestScore": 97,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Aarush"
+    "avatar": "https://ui-avatars.com/api/?name=surinder+kumar"
   },
   {
     "employeeId": "EMP002",
-    "name": "Monalisha",
+    "name": "Tawlinder singh",
     "latestScore": 94,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Monalisha"
+    "avatar": "https://ui-avatars.com/api/?name=Tawlinder+singh"
   },
   {
     "employeeId": "EMP003",
-    "name": "Abhisht",
+    "name": "Rajeev",
     "latestScore": 92,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Abhisht"
+    "avatar": "https://ui-avatars.com/api/?name=Rajeev"
   },
   {
     "employeeId": "EMP004",
-    "name": "Harshit Sharma",
+    "name": "Rohit Kumar Sharma",
     "latestScore": 90,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Harshit+Sharma"
+    "avatar": "https://ui-avatars.com/api/?name=Rohit+Kumar+Sharma"
   },
   {
     "employeeId": "EMP005",
-    "name": "Yug",
+    "name": "Vishal kumar",
     "latestScore": 88,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Yug"
+    "avatar": "https://ui-avatars.com/api/?name=Vishal+kumar"
   },
   {
     "employeeId": "EMP006",
-    "name": "Priya",
+    "name": "Rohit Kumar Sharma",
     "latestScore": 87,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Priya"
+    "avatar": "https://ui-avatars.com/api/?name=Rohit+Kumar+Sharma"
   },
   {
     "employeeId": "EMP007",
-    "name": "Kunal",
+    "name": "Prateek Sharma",
     "latestScore": 82,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Kunal"
+    "avatar": "https://ui-avatars.com/api/?name=Prateek+Sharma"
   },
   {
     "employeeId": "EMP008",
-    "name": "Riya",
+    "name": "Ashwani Kumar",
     "latestScore": 80,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Riya"
+    "avatar": "https://ui-avatars.com/api/?name=Ashwani+Kumar"
   },
   {
     "employeeId": "EMP009",
-    "name": "Dev",
+    "name": "Jhanvi Arora",
     "latestScore": 77,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Dev"
+    "avatar": "https://ui-avatars.com/api/?name=Jhanvi+Arora"
   },
   {
     "employeeId": "EMP010",
-    "name": "Sneha",
+    "name": "Rajath Kumar",
     "latestScore": 72,
     "trend": "+1%",
-    "avatar": "https://ui-avatars.com/api/?name=Sneha"
+    "avatar": "https://ui-avatars.com/api/?name=Rajath+Kumar"
   }
 ];

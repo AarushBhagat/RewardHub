@@ -209,8 +209,8 @@ const Performance = () => {
               </div>
               <h3 className="font-semibold text-slate-800 dark:text-white">Top Performer</h3>
             </div>
-            <p className="text-xl font-bold text-slate-900 dark:text-white mt-1">Aarush Bhagat</p>
-            <p className="text-sm text-slate-500 mt-1">EMP003 • Score: 98/100</p>
+            <p className="text-xl font-bold text-slate-900 dark:text-white mt-1">Ashwani Kumar</p>
+            <p className="text-sm text-slate-500 mt-1">EMP008 • Score: 98/100</p>
           </div>
         </div>
       </div>

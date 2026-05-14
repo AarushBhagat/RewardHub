@@ -40,10 +40,10 @@ const Login = () => {
 
   const handleDemoFill = (role) => {
     if (role === 'admin') {
-      setEmail('monalisha@company.com');
+      setEmail('HR@company.com');
       setPassword('password123');
     } else {
-      setEmail('aarush@company.com');
+      setEmail('employee@company.com');
       setPassword('password123');
     }
   };

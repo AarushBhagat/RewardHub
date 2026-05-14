@@ -75,5 +75,38 @@ export const bonuses = [
     "date": "2024-03-12",
     "reviewedBy": null,
     "reviewedOn": null
+  },
+  {
+    "id": "BON008",
+    "employeeId": "EMP008",
+    "type": "Performance Bonus",
+    "amount": 40000,
+    "reason": "Exceptional marketing strategy",
+    "status": "Approved",
+    "date": "2024-03-15",
+    "reviewedBy": "Admin",
+    "reviewedOn": "2024-03-15"
+  },
+  {
+    "id": "BON009",
+    "employeeId": "EMP009",
+    "type": "Sales Target",
+    "amount": 38000,
+    "reason": "Exceeded yearly sales quota by 200%",
+    "status": "Approved",
+    "date": "2024-03-16",
+    "reviewedBy": "Admin",
+    "reviewedOn": "2024-03-16"
+  },
+  {
+    "id": "BON010",
+    "employeeId": "EMP010",
+    "type": "Performance Bonus",
+    "amount": 36000,
+    "reason": "Outstanding HR restructuring",
+    "status": "Approved",
+    "date": "2024-03-17",
+    "reviewedBy": "Admin",
+    "reviewedOn": "2024-03-17"
   }
 ];
