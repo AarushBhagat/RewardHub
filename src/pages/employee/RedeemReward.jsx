@@ -40,6 +40,8 @@ const rewardCategories = [
       { id: 'pto-1', name: '1 Extra Paid Day Off', cost: 1500, available: true },
       { id: 'wfh-1', name: '1 Week Work From Anywhere', cost: 3000, available: true },
       { id: 'health-plus', name: 'Premium Health Add-on', cost: 4500, available: true },
+      { id: 'health-insurance', name: 'Comprehensive Health Insurance (1 Yr)', cost: 15000, available: true },
+      { id: 'mutual-fund', name: '₹1000 Mutual Fund Investment', cost: 10000, available: true },
       { id: 'pto-4day', name: '1 Month 4-Day Work Week', cost: 8000, available: true },
     ]
   },
@@ -49,10 +51,10 @@ const rewardCategories = [
     description: 'Exclusive company swag, tech gadgets, and gift vouchers.',
     icon: <Gift className="w-6 h-6 text-amber-400" />,
     items: [
-      { id: 'voucher-coffee', name: '$50 Coffee Shop Voucher', cost: 500, available: true },
+      { id: 'voucher-coffee', name: '₹50 Coffee Shop Voucher', cost: 500, available: true },
       { id: 'swag-hoodie', name: 'Premium Company Hoodie', cost: 800, available: true },
       { id: 'swag-bag', name: 'Premium Waterproof Backpack', cost: 1000, available: true },
-      { id: 'voucher-amazon', name: '$100 Amazon Gift Card', cost: 1000, available: true },
+      { id: 'voucher-amazon', name: '₹100 Amazon Gift Card', cost: 1000, available: true },
       { id: 'tech-chair', name: 'Ergonomic Office Chair', cost: 3500, available: false },
       { id: 'tech-headphones', name: 'Noise Cancelling Headphones', cost: 4000, available: true },
       { id: 'tech-monitor', name: '4K External Monitor', cost: 6000, available: true },

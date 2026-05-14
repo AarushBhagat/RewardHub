@@ -16,7 +16,7 @@ const allTransactions = [
   { id: 1, type: 'Bonus', title: 'Q3 Performance Bonus', points: +500, date: 'Oct 28, 2026', desc: 'Awarded for exceeding quarterly KPIs by 15%.' },
   { id: 2, type: 'Badge', title: 'Problem Solver Badge', points: +50, date: 'Oct 25, 2026', desc: 'Recognized for resolving a critical production issue.' },
   { id: 3, type: 'Peer', title: 'Shoutout from Sarah', points: +20, date: 'Oct 15, 2026', desc: '"Great help with the new React components!"' },
-  { id: 4, type: 'Redemption', title: 'Amazon Gift Card', points: -300, date: 'Sep 30, 2026', desc: 'Redeemed $30 Gift Card.' },
+  { id: 4, type: 'Redemption', title: 'Amazon Gift Card', points: -300, date: 'Sep 30, 2026', desc: 'Redeemed ₹30 Gift Card.' },
   { id: 5, type: 'Bonus', title: 'Perfect Attendance', points: +100, date: 'Sep 01, 2026', desc: 'August perfect attendance reward.' },
 ];
 

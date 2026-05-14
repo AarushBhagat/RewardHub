@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Users, Gift, TrendingUp, Activity, Award, MoreVertical, ArrowRight,
-  Download, Share2, DollarSign, Trophy, Search, BarChart3, PieChart as PieIcon
+  Download, Share2, IndianRupee, Trophy, Search, BarChart3, PieChart as PieIcon
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -162,9 +162,9 @@ const AdminDashboard = () => {
     const topPerformer = Object.entries(employeeTotals).sort((a, b) => b[1] - a[1])[0]?.[0] || 'N/A';
 
     return [
-      { label: 'Total Rewards Value', value: `$${totalAmount.toLocaleString()}`, icon: <DollarSign size={24} />, trend: "up", trendValue: 12 },
+      { label: 'Total Rewards Value', value: `₹${totalAmount.toLocaleString()}`, icon: <IndianRupee size={24} />, trend: "up", trendValue: 12 },
       { label: 'Employees Rewarded', value: uniqueEmployees, icon: <Users size={24} />, trend: "up", trendValue: 8 },
-      { label: 'Avg Reward / Employee', value: `$${Math.round(avgReward).toLocaleString()}`, icon: <Activity size={24} />, trend: "down", trendValue: 2 },
+      { label: 'Avg Reward / Employee', value: `₹${Math.round(avgReward).toLocaleString()}`, icon: <Activity size={24} />, trend: "down", trendValue: 2 },
       { label: 'Overall Top Performer', value: topPerformer, icon: <Trophy size={24} />, trend: "up", trendValue: 5 },
     ];
   }, [filteredData]);

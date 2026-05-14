@@ -139,7 +139,7 @@ const EmployeeDashboard = () => {
           <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-full -mr-10 -mt-10" />
           <div className="p-3 bg-amber-500/10 rounded-2xl text-amber-500 w-max mb-4"><Star size={24} /></div>
           <h3 className="text-3xl font-black text-slate-900 dark:text-white font-display">
-            $<AnimatedCounter value={totalBonusValue} />
+            ₹<AnimatedCounter value={totalBonusValue} />
           </h3>
           <p className="text-sm font-bold text-slate-500 mt-1">Total Cash Bonuses</p>
         </motion.div>
