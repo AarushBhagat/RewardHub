@@ -11,7 +11,8 @@ import {
   MessageSquare, 
   IndianRupee,
   FileText,
-  Sparkles
+  Sparkles,
+  Trophy
 } from 'lucide-react';
 import Topbar from '../components/Topbar';
 import PageTransition from '../components/PageTransition';
@@ -54,6 +55,7 @@ const AdminLayout = () => {
     { name: 'Feedback', icon: <MessageSquare size={20} />, path: '/admin/feedback' },
     { name: 'Bonuses', icon: <IndianRupee size={20} />, path: '/admin/bonuses' },
     { name: 'Reports', icon: <FileText size={20} />, path: '/admin/reports' },
+    { name: 'Leaderboard', icon: <Trophy size={20} />, path: '/admin/leaderboard' },
     { name: 'AI Engine', icon: <Sparkles size={20} />, path: '/admin/ai-engine' },
   ];
 

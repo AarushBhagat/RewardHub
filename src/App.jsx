@@ -21,6 +21,7 @@ import Badges from './pages/admin/Badges';
 import Feedback from './pages/admin/Feedback';
 import Bonus from './pages/admin/Bonus';
 import Reports from './pages/admin/Reports';
+import AdminLeaderboard from './pages/admin/Leaderboard';
 
 import EmployeeDashboard from './pages/employee/EmployeeDashboard';
 import EmployeeRewards from './pages/employee/Rewards';
@@ -94,6 +95,7 @@ function App() {
               <Route path="feedback" element={<Feedback />} />
               <Route path="bonuses" element={<Bonus />} />
               <Route path="reports" element={<Reports />} />
+              <Route path="leaderboard" element={<AdminLeaderboard />} />
             </Route>
 
             {/* Employee Routes with Layout */}
